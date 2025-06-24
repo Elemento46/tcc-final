@@ -1,32 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-  <title></title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="/tcc-final/assets/CarbonXLogo2.png"
+      type="image/x-icon" />
+    <link rel="stylesheet" href="../css/contato.css" />
+    <script src="/tcc-final/js/menu.js" defer></script>
+    <title>Calculadora de Carbono</title>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-          <a href=""><img src="" alt=""></a>
-          <ul>
-            <li><a href="pages/sobre.html">Sobre</a></li>
-            <li><a href="pages/servicos.html">Serviços</a></li>
-            <li><a href="pages/calculadora.html">Calculadora</a></li>
-            <li><a href="#">Contato</a></li>
-          </ul>
-        </nav>
-      </header>
+      <nav>
+        <div class="logo">
+          <a href="../index.html"><img src="../assets/CarbonXLogo.png"
+              alt="Logo CarbonX"></a>
+        </div>
 
-      <main>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-      </main>
+        <ul class="menu" id="menu">
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="calculadora.html">Calculadora</a></li>
+          <li><a href="#" class="active">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <footer>
-        
-      </footer>
-</body>
+    <main>
+      <section class="contato-intro">
+        <h1>Contatos</h1>
+        <p>
+          Entre em contato conosco. Caso tenha dúvidas, sugestões ou necessite
+          de qualquer tipo de assistência,
+          nossa equipe de atendimento está à disposição para oferecer todo o
+          suporte necessário com agilidade,
+          atenção e o mais alto padrão de qualidade. Nosso compromisso é
+          garantir que sua experiência seja a melhor
+          possível, sempre com foco na resolução eficiente de suas demandas.
+        </p>
+      </section>
+
+      <section>
+        <form action="mailto:seu-email@exemplo.com" method="post"
+          enctype="text/plain" class="form-contato">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome"
+            required>
+
+          <label for="empresa">Empresa:</label>
+          <input type="text" id="empresa" name="empresa"
+            placeholder="Nome da empresa (opcional)">
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5"
+            placeholder="Escreva sua mensagem aqui..." required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <img src="../assets/CarbonXLogo.png" alt="Logo CarbonX"
+          class="logo-footer">
+        <p>&copy; 2025 CarbonX. Todos os direitos reservados.</p>
+        <p>
+          <a href="https://instagram.com" target="_blank">Instagram</a> |
+          <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+          <a href="https://facebook.com" target="_blank">Facebook</a>
+        </p>
+        <p><a href="politica.html" target="_blank">Política de Privacidade
+            sobre Créditos
+            de Carbono</a></p>
+      </div>
+    </footer>
+  </body>
 </html>
