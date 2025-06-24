@@ -1,0 +1,372 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgba(195, 197, 196, 0.1), #e8f7ec), url('../assets/credito-de-carbono.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #000;
+    line-height: 1.6;
+    font-size: medium;
+}
+
+.contato-intro {
+    max-width: 700px;
+    margin: 60px auto;
+    background-color: #e8f7ec;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #61d56e;
+    padding: 15px 40px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.menu li a:hover {
+    background-color: #2b9d38;
+    color: #fff;
+}
+
+.menu li a.active {
+    background-color: #205789;
+    color: #fff;
+}
+
+.conteudo-principal {
+    background-color: #e8f7ec;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.conteudo-principal h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #205789;
+}
+
+.conteudo-principal p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    color: #333;
+}
+
+.btn-central {
+    background-color: #61d56e;
+    color: #000;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-central:hover {
+    background-color: #2b9d38;
+    color: #fff;
+}
+
+.info {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 10px auto;
+    text-align: left;
+    background: linear-gradient(to bottom, #e8f7ec8e 2%, #61d56e 98%);
+    border-radius: 50px;
+}
+
+.info h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #205789;
+}
+
+.info p {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+form.form-contato {
+    max-width: 700px;
+    margin: 60px auto;
+    background-color: #e8f7ec;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-contato label {
+    font-weight: 600;
+    color: #205789;
+    font-size: 1.1rem;
+}
+
+.form-contato input,
+.form-contato textarea {
+    padding: 15px;
+    border: 2px solid #61d56e;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #000;
+    transition: border-color 0.3s ease;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+    outline: none;
+    border-color: #205789;
+}
+
+.form-contato textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-contato button {
+    background-color: #61d56e;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-contato button:hover {
+    background-color: #2b9d38;
+    color: #fff;
+}
+
+footer {
+    background-color: #61d56e;
+    color: #000;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.logo-footer {
+    height: 120px;
+    margin-bottom: 7px;
+}
+
+footer a {
+    color: #000;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: #205789;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    nav img {
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .conteudo-principal {
+        padding: 50px 15px;
+    }
+
+    .conteudo-principal h1 {
+        font-size: 2rem;
+    }
+
+    .conteudo-principal p {
+        font-size: 1rem;
+    }
+
+    .btn-central {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    .info {
+        padding: 40px 15px;
+        border-radius: 30px;
+    }
+
+    .info h2 {
+        font-size: 1.5rem;
+    }
+
+    .info p {
+        font-size: 1rem;
+    }
+
+    .logo-footer {
+        height: 80px;
+    }
+
+    footer {
+        padding: 20px 15px;
+    }
+
+    form.form-contato {
+        padding: 25px;
+        border-radius: 20px;
+    }
+
+    .form-contato label {
+        font-size: 1rem;
+    }
+
+    .form-contato input,
+    .form-contato textarea {
+        font-size: 0.95rem;
+    }
+
+    .form-contato button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        background-color: #61d56e;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        animation: fadeIn 0.3s ease forwards;
+    }
+
+    .menu li {
+        border-top: 1px solid #2b9d38;
+    }
+
+    .menu li:last-child {
+        border-bottom: 1px solid #2b9d38;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
