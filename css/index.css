@@ -18,18 +18,24 @@ body {
   font-size: medium;
 }
 
+header {
+  background-color: #61d56e;
+  padding: 15px 40px;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #61d56e;
-  padding: 15px 40px;
   flex-wrap: wrap;
 }
 
-
 .logo {
-  flex-shrink: 0;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
@@ -38,28 +44,23 @@ nav {
   display: block;
 }
 
-
 nav ul {
   list-style: none;
   display: flex;
   gap: 25px;
 }
 
-nav a {
+nav ul li a {
   text-decoration: none;
   color: #000;
   font-weight: 600;
-  transition: background-color 0.3s ease;
   padding: 10px 15px;
   border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.menu li a:hover {
-  background-color: #2b9d38;
-  color: #fff;
-}
-
-.menu li a.active {
+nav ul li a:hover,
+nav ul li a.active {
   background-color: #205789;
   color: #fff;
 }
@@ -124,6 +125,7 @@ footer {
   color: #000;
   padding: 30px 20px;
   text-align: center;
+  margin-top: 60px;
 }
 
 .logo-footer {
@@ -135,10 +137,28 @@ footer a {
   color: #000;
   text-decoration: underline;
   font-weight: 500;
+  margin: 0 8px;
+  transition: color 0.3s ease;
 }
 
 footer a:hover {
   color: #205789;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -146,11 +166,11 @@ footer a:hover {
     flex-direction: column;
     align-items: flex-start;
     padding: 15px 20px;
+    position: relative;
   }
 
-  nav img {
+  .logo img {
     height: 80px;
-    margin-bottom: 10px;
   }
 
   nav ul {
@@ -163,7 +183,7 @@ footer a:hover {
     width: 100%;
   }
 
-  nav a {
+  nav ul li a {
     display: block;
     width: 100%;
     padding: 10px;
@@ -205,28 +225,6 @@ footer a:hover {
 
   footer {
     padding: 20px 15px;
-  }
-}
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  z-index: 1001;
-}
-
-.menu-toggle span {
-  width: 30px;
-  height: 3px;
-  background: #000;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  nav {
-    position: relative;
   }
 
   .menu-toggle {
