@@ -34,16 +34,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-<<<<<<< HEAD
-=======
-  background-color: #61d56e;
-  padding: 15px 40px;
->>>>>>> ab4ae76e0ba0fee7444d560e6a02dc75a2e1f25e
   flex-wrap: wrap;
 }
 
 .logo {
-<<<<<<< HEAD
   background-color: #fff;
   border-radius: 12px;
   padding: 5px;
@@ -69,27 +63,15 @@ nav {
   width: 25px;
   background-color: #000;
   border-radius: 2px;
-=======
-  flex-shrink: 0;
-}
-
-nav img {
-  height: 100px;
-  width: auto;
->>>>>>> ab4ae76e0ba0fee7444d560e6a02dc75a2e1f25e
   display: block;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-<<<<<<< HEAD
   flex-wrap: wrap;
   gap: 25px;
   transition: transform 0.3s ease;
-=======
-  gap: 25px;
->>>>>>> ab4ae76e0ba0fee7444d560e6a02dc75a2e1f25e
 }
 
 nav a {
@@ -111,26 +93,9 @@ nav a {
   color: #fff;
 }
 
-<<<<<<< HEAD
 main {
   flex: 1;
   padding: 40px 20px;
-=======
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  z-index: 1001;
-}
-
-.menu-toggle span {
-  width: 30px;
-  height: 3px;
-  background: #000;
-  border-radius: 2px;
-  transition: all 0.3s ease;
->>>>>>> ab4ae76e0ba0fee7444d560e6a02dc75a2e1f25e
 }
 
 #calculadora {
@@ -245,7 +210,6 @@ footer a:hover {
 
 @media (max-width: 768px) {
   nav {
-<<<<<<< HEAD
     flex-direction: column;
     align-items: flex-start;
     padding: 15px 20px;
@@ -264,8 +228,6 @@ footer a:hover {
   }
 
   .menu {
-=======
->>>>>>> ab4ae76e0ba0fee7444d560e6a02dc75a2e1f25e
     flex-direction: column;
     align-items: flex-start;
     padding: 15px 20px;
@@ -315,7 +277,6 @@ footer a:hover {
     padding: 20px;
     font-size: 1.1rem;
   }
-<<<<<<< HEAD
 
   .logo-footer {
     height: 80px;
@@ -337,11 +298,6 @@ footer a:hover {
 
   .logo img {
     height: 70px;
-=======
-
-  .logo-footer {
-    height: 80px;
->>>>>>> ab4ae76e0ba0fee7444d560e6a02dc75a2e1f25e
   }
 
   footer {
