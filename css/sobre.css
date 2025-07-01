@@ -159,96 +159,96 @@ footer a:hover {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 15px 20px;
-    }
-  
-    .logo img {
-      height: 80px;
-    }
-  
-    .menu-toggle {
-      display: flex;
-      position: absolute;
-      top: 25px;
-      right: 20px;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      z-index: 1002;
-    }
-  
-    .menu-toggle span {
-      width: 30px;
-      height: 3px;
-      background: #000;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-  
-    .menu-toggle.open span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-  
-    .menu-toggle.open span:nth-child(2) {
-      opacity: 0;
-    }
-  
-    .menu-toggle.open span:nth-child(3) {
-      transform: rotate(-45deg) translate(6px, -6px);
-    }
-  
-    nav ul {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: #61d56e;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      display: none;
-      gap: 20px;
-      z-index: 1001;
-    }
-  
-    nav ul.show {
-      display: flex;
-      animation: fadeIn 0.3s ease forwards;
-    }
-  
-    nav ul li {
-      width: 100%;
-      text-align: center;
-    }
-  
-    nav ul li a {
-      font-size: 1.3rem;
-      display: block;
-      width: 100%;
-      padding: 15px;
-      color: #000;
-      text-decoration: none;
-    }
-  
-    nav ul li a:hover,
-    nav ul li a.active {
-      background-color: #205789;
-      color: #fff;
-    }
-  
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
   }
-  
+
+  .logo img {
+    height: 80px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1002;
+  }
+
+  .menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #61d56e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    gap: 20px;
+    z-index: 1001;
+  }
+
+  nav ul.show {
+    display: flex;
+    animation: fadeIn 0.3s ease forwards;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    font-size: 1.3rem;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    color: #000;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: #205789;
+    color: #fff;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
