@@ -7,8 +7,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html,
-body {
+html, body {
   height: 100%;
 }
 
@@ -18,16 +17,18 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  color: #000;
+  color: #205789;
   line-height: 1.6;
   font-size: medium;
   display: flex;
   flex-direction: column;
 }
 
+/* HEADER */
 header {
   background-color: #61d56e;
   padding: 15px 40px;
+  z-index: 10;
 }
 
 nav {
@@ -35,6 +36,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .logo {
@@ -49,32 +51,17 @@ nav {
   height: 100px;
   width: auto;
   display: block;
+  pointer-events: none;
 }
 
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 6px;
-}
-
-.menu-toggle span {
-  height: 3px;
-  width: 25px;
-  background-color: #000;
-  border-radius: 2px;
-  display: block;
-}
-
+/* Menu padrão */
 nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
   gap: 25px;
-  transition: transform 0.3s ease;
 }
 
-nav a {
+nav ul li a {
   text-decoration: none;
   color: #000;
   font-weight: 600;
@@ -83,16 +70,30 @@ nav a {
   transition: background-color 0.3s ease;
 }
 
-.menu li a:hover {
-  background-color: #2b9d38;
-  color: #fff;
-}
-
-.menu li a.active {
+nav ul li a:hover,
+nav ul li a.active {
   background-color: #205789;
   color: #fff;
 }
 
+/* Botão Mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* CONTEÚDO PRINCIPAL */
 main {
   flex: 1;
   padding: 40px 20px;
@@ -183,6 +184,7 @@ main {
   margin-bottom: 10px;
 }
 
+/* FOOTER */
 footer {
   background-color: #61d56e;
   color: #000;
@@ -194,6 +196,7 @@ footer {
 .logo-footer {
   height: 120px;
   margin-bottom: 7px;
+  pointer-events: none;
 }
 
 footer a {
@@ -208,12 +211,12 @@ footer a:hover {
   color: #205789;
 }
 
+/* RESPONSIVO */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
     padding: 15px 20px;
-    position: relative;
   }
 
   .logo img {
@@ -227,31 +230,48 @@ footer a:hover {
     right: 20px;
   }
 
-  .menu {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
+  .menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
   }
 
-  nav img {
-    height: 80px;
-    margin-bottom: 10px;
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
   }
 
   nav ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #61d56e;
     flex-direction: column;
-    gap: 10px;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    gap: 20px;
+    z-index: 1000;
+  }
+
+  nav ul.show {
+    display: flex;
+    animation: fadeIn 0.3s ease forwards;
   }
 
   nav ul li {
     width: 100%;
+    text-align: center;
   }
 
-  nav a {
+  nav ul li a {
+    font-size: 1.3rem;
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
   }
 
   #calculadora {
@@ -267,17 +287,6 @@ footer a:hover {
     font-size: 1rem;
   }
 
-  #calculadora input[type="number"],
-  #calculadora button[type="submit"] {
-    font-size: 1rem;
-    padding: 12px;
-  }
-
-  #resultado {
-    padding: 20px;
-    font-size: 1.1rem;
-  }
-
   .logo-footer {
     height: 80px;
   }
@@ -285,74 +294,12 @@ footer a:hover {
   footer {
     padding: 20px 15px;
   }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding: 20px 10px;
-  }
-
-  header {
-    padding: 10px 20px;
-  }
-
-  .logo img {
-    height: 70px;
-  }
-
-  footer {
-    padding: 20px 15px;
-  }
-
-  .menu-toggle {
-    display: flex;
-    position: absolute;
-    top: 25px;
-    right: 20px;
-  }
-
-  .menu {
-    flex-direction: column;
-    gap: 0;
-    width: 100%;
-    background-color: #61d56e;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
-    animation: fadeIn 0.3s ease forwards;
-  }
-
-  .menu li {
-    border-top: 1px solid #2b9d38;
-  }
-
-  .menu li:last-child {
-    border-bottom: 1px solid #2b9d38;
-  }
-
-  .menu.show {
-    display: flex;
-  }
-
-  .menu-toggle.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .menu-toggle.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
 
   @keyframes fadeIn {
     from {
       opacity: 0;
       transform: translateY(-10px);
     }
-
     to {
       opacity: 1;
       transform: translateY(0);
