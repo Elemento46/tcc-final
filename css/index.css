@@ -324,10 +324,11 @@ footer a:hover {
 
 .banner-animado {
   position: relative;
+  width: 100%;
   height: 300px;
   overflow: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .bg-video {
@@ -337,27 +338,56 @@ footer a:hover {
   min-width: 100%;
   min-height: 100%;
   transform: translate(-50%, -50%);
-  z-index: 1;
   object-fit: cover;
+  z-index: 1;
   filter: brightness(0.5);
 }
 
 .banner-conteudo {
   position: relative;
   z-index: 2;
-  padding: 40px 20px;
   color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .banner-conteudo h2 {
-  font-size: 3.0rem;
+  font-size: 2.5rem;
+  line-height: 1.4;
+  max-width: 90%;
   color: #fff;
 }
 
 #typed-precisa {
   font-weight: bold;
+  display: inline;
 }
 
 #typed-text {
   display: inline;
+}
+
+@media (max-width: 768px) {
+  .banner-animado {
+    height: 220px;
+  }
+
+  .banner-conteudo h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-animado {
+    height: 180px;
+  }
+
+  .banner-conteudo h2 {
+    font-size: 1.3rem;
+  }
 }
