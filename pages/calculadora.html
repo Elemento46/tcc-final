@@ -19,7 +19,8 @@
               alt="Logo CarbonX"></a>
         </div>
 
-        <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show'); this.classList.toggle('open');">
+        <div class="menu-toggle"
+          onclick="document.querySelector('nav ul').classList.toggle('show'); this.classList.toggle('open');">
           <span></span>
           <span></span>
           <span></span>
@@ -41,12 +42,21 @@
           seriam necessários para compensá-la.</p>
         <form id="form-calculadora" novalidate>
           <label for="energia">Consumo mensal de energia (kWh):</label>
-          <input type="number" id="energia" name="energia" min="0" required
-            aria-required="true" />
+          <input type="number" id="energia" name="energia" min="0" required />
 
           <label for="transporte">Distância mensal de carro (km):</label>
           <input type="number" id="transporte" name="transporte" min="0"
-            required aria-required="true" />
+            required />
+
+          <label for="aviao">Distância mensal de avião (km):</label>
+          <input type="number" id="aviao" name="aviao" min="0" />
+
+          <label for="gas">Consumo mensal de gás de cozinha (kg de GLP):</label>
+          <input type="number" id="gas" name="gas" min="0" />
+
+          <label for="residuos">Quantidade média mensal de resíduos
+            (kg):</label>
+          <input type="number" id="residuos" name="residuos" min="0" />
 
           <button type="submit">Calcular</button>
         </form>
@@ -58,20 +68,21 @@
 
     <footer>
       <div class="footer-content">
-        <img src="../assets/CarbonXLogo.png" alt="Logo CarbonX"
+        <img src="assets/CarbonXLogo.png" alt="Logo CarbonX"
           class="logo-footer">
         <p>&copy; 2025 CarbonX. Todos os direitos reservados.</p>
         <p>
-          <a href="https://instagram.com" target="_blank">Instagram</a> |
-          <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
-          <a href="https://facebook.com" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/carbonxecologica/"
+            target="_blank">Instagram</a> |
+          <a href="https://www.linkedin.com/in/carbonx-ecológica-235598372/"
+            target="_blank">LinkedIn</a>
         </p>
-        <p><a href="politica.html" target="_blank">Política de Privacidade
+        <p><a href="pages/politica.html" target="_blank">Política de Privacidade
             sobre Créditos
             de Carbono</a></p>
       </div>
     </footer>
-    
+
     <div vw class="enabled">
       <div vw-access-button class="active"></div>
       <div vw-plugin-wrapper>
@@ -80,14 +91,10 @@
     </div>
 
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/gh/PrabothCharith/accessibility-plugin@main/accessibility-menu.min.js"></script>
-
-    <script src="https://code.responsivevoice.org/responsivevoice.js?key=yyJkkDtK"></script>
-
-    
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/PrabothCharith/accessibility-plugin@main/accessibility-menu.min.js"></script>
+    <script
+      src="https://code.responsivevoice.org/responsivevoice.js?key=yyJkkDtK"></script>
   </body>
 </html>
