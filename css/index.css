@@ -289,6 +289,25 @@ footer a:hover {
   footer {
     padding: 20px 15px;
   }
+
+  /* 👇 Ajustes para responsividade do banner */
+  .banner-animado {
+    height: 200px;
+  }
+
+  .banner-conteudo {
+    padding: 20px 15px;
+  }
+
+  .banner-conteudo h2 {
+    font-size: 1.8rem;
+  }
+
+  .bg-video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
 }
 
 @keyframes fadeIn {
@@ -320,7 +339,7 @@ footer a:hover {
   transform: translate(-50%, -50%);
   z-index: 1;
   object-fit: cover;
-  filter: brightness(0.5); /* escurece o vídeo para dar contraste com o texto */
+  filter: brightness(0.5);
 }
 
 .banner-conteudo {
@@ -342,4 +361,3 @@ footer a:hover {
 #typed-text {
   display: inline;
 }
-
