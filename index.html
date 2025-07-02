@@ -6,6 +6,8 @@
     <title>CarbonX - Créditos de Carbono</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/animacao.js"></script>
     <link rel="icon" href="assets/CarbonXLogo2.png" type="image/png">
   </head>
   <body>
@@ -16,7 +18,8 @@
           <a href="#"><img src="assets/CarbonXLogo.png" alt="Logo CarbonX"></a>
         </div>
 
-        <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show'); this.classList.toggle('open');">
+        <div class="menu-toggle"
+          onclick="document.querySelector('nav ul').classList.toggle('show'); this.classList.toggle('open');">
           <span></span>
           <span></span>
           <span></span>
@@ -32,6 +35,20 @@
     </header>
 
     <main>
+      <div class="banner-animado">
+        <video autoplay muted loop playsinline class="bg-video">
+          <source src="assets/meioAmbiente.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeo em HTML5.
+        </video>
+
+        <div class="banner-conteudo">
+          <h2>
+            <span id="typed-precisa"></span>
+            <span id="typed-text"></span>
+          </h2>
+        </div>
+      </div>
+
       <div class="conteudo-principal">
         <h1>Compense seu impacto no meio ambiente</h1>
         <p>
@@ -73,9 +90,10 @@
           class="logo-footer">
         <p>&copy; 2025 CarbonX. Todos os direitos reservados.</p>
         <p>
-          <a href="https://instagram.com" target="_blank">Instagram</a> |
-          <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
-          <a href="https://facebook.com" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/carbonxecologica/"
+            target="_blank">Instagram</a> |
+          <a href="https://www.linkedin.com/in/carbonx-ecológica-235598372/"
+            target="_blank">LinkedIn</a>
         </p>
         <p><a href="pages/politica.html" target="_blank">Política de Privacidade
             sobre Créditos
@@ -95,10 +113,11 @@
       new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-    <script src="https://cdn.jsdelivr.net/gh/PrabothCharith/accessibility-plugin@main/accessibility-menu.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/PrabothCharith/accessibility-plugin@main/accessibility-menu.min.js"></script>
 
-    <script src="https://code.responsivevoice.org/responsivevoice.js?key=yyJkkDtK"></script>
+    <script
+      src="https://code.responsivevoice.org/responsivevoice.js?key=yyJkkDtK"></script>
 
-    
   </body>
 </html>
